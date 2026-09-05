@@ -120,3 +120,21 @@
     padding: 15px;
   }
 }
+
+/* Estilos para los enlaces del sidebar */
+.sidebar li a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.sidebar li a:hover {
+  color: white;
+}
+
+.sidebar li.active a {
+  color: #00D4FF;
+}

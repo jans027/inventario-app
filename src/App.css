@@ -198,3 +198,183 @@
     font-size: 2rem;
   }
 }
+
+/* ===== ESTILOS PARA PÁGINAS ===== */
+
+/* Botones */
+.btn-add {
+  background: #00D4FF;
+  color: #0A1628;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+}
+
+.btn-sell {
+  background: #22C55E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-sell:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+}
+
+.btn-purchase {
+  background: #FF6B35;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-purchase:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* Tablas */
+.table-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #E8ECF1;
+}
+
+.product-table thead th {
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  color: #8899AA;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.product-table tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.low-stock {
+  color: #EF4444;
+  font-weight: 600;
+}
+
+/* Acciones en tabla */
+.btn-action {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.btn-action.edit:hover {
+  background: rgba(0, 212, 255, 0.15);
+}
+
+.btn-action.delete:hover {
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.btn-action.view:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Roles */
+.role-admin {
+  background: rgba(0, 212, 255, 0.15);
+  color: #00D4FF;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.role-seller {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22C55E;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.status-active {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22C55E;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Reportes */
+.reports-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.report-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.report-card h3 {
+  color: #E8ECF1;
+  margin-bottom: 15px;
+}
+
+.report-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.report-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #E8ECF1;
+}
+
+.report-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00D4FF;
+}
+
+@media (max-width: 768px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+}

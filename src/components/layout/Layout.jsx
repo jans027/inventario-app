@@ -1,10 +1,17 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Layout.css';
 
 const Layout = ({ children }) => {
+  const location = useLocation();
+
+  // Función para saber si un enlace está activo
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
+  };
+
   return (
     <div className="layout">
-      {/* Barra superior - Header */}
       <header className="header">
         <div className="header-left">
           <h1>📦 Inventario</h1>
@@ -15,20 +22,27 @@ const Layout = ({ children }) => {
         </div>
       </header>
 
-      {/* Contenedor principal con sidebar y contenido */}
       <div className="main-container">
-        {/* Barra lateral - Sidebar */}
         <nav className="sidebar">
           <ul>
-            <li className="active">📊 Dashboard</li>
-            <li>📦 Productos</li>
-            <li>💰 Movimientos</li>
-            <li>👤 Usuarios</li>
-            <li>📈 Reportes</li>
+            <li className={isActive('/dashboard') || isActive('/')}>
+              <Link to="/dashboard">📊 Dashboard</Link>
+            </li>
+            <li className={isActive('/productos')}>
+              <Link to="/productos">📦 Productos</Link>
+            </li>
+            <li className={isActive('/movimientos')}>
+              <Link to="/movimientos">💰 Movimientos</Link>
+            </li>
+            <li className={isActive('/usuarios')}>
+              <Link to="/usuarios">👤 Usuarios</Link>
+            </li>
+            <li className={isActive('/reportes')}>
+              <Link to="/reportes">📈 Reportes</Link>
+            </li>
           </ul>
         </nav>
 
-        {/* Área de contenido principal */}
         <main className="content">
           {children}
         </main>
