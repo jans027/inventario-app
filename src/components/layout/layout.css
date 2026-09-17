@@ -1,4 +1,5 @@
 /* Contenedor principal */
+/* ===== LAYOUT PRINCIPAL ===== */
 .layout {
   min-height: 100vh;
   background-color: #0A1628;
@@ -6,7 +7,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ===== HEADER (Barra superior) ===== */
+/* ===== HEADER ===== */
 .header {
   background: rgba(255, 255, 255, 0.05);
   padding: 15px 30px;
@@ -15,6 +16,10 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .header-left h1 {
@@ -50,11 +55,12 @@
   transform: scale(1.02);
 }
 
-/* ===== SIDEBAR (Barra lateral) ===== */
+/* ===== CONTENEDOR PRINCIPAL ===== */
 .main-container {
   display: flex;
 }
 
+/* ===== SIDEBAR ===== */
 .sidebar {
   width: 220px;
   background: rgba(255, 255, 255, 0.03);
@@ -62,6 +68,7 @@
   min-height: calc(100vh - 70px);
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   flex-shrink: 0;
+  transition: width 0.3s ease;
 }
 
 .sidebar ul {
@@ -95,33 +102,6 @@
   font-weight: 600;
 }
 
-/* ===== CONTENIDO PRINCIPAL ===== */
-.content {
-  flex: 1;
-  padding: 30px;
-  overflow-x: hidden;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 60px;
-  }
-  
-  .sidebar li span {
-    display: none;
-  }
-  
-  .header {
-    padding: 15px;
-  }
-  
-  .content {
-    padding: 15px;
-  }
-}
-
-/* Estilos para los enlaces del sidebar */
 .sidebar li a {
   color: inherit;
   text-decoration: none;
@@ -137,4 +117,110 @@
 
 .sidebar li.active a {
   color: #00D4FF;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar li {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 15px;
+    height: 60px;
+  }
+
+  .header-left h1 {
+    font-size: 1.2rem;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .btn-logout {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .sidebar {
+    width: 60px;
+    min-height: calc(100vh - 60px);
+  }
+
+  .sidebar li {
+    padding: 12px;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  .sidebar li a {
+    justify-content: center;
+  }
+
+  /* Ocultar texto del sidebar */
+  .sidebar li a span,
+  .sidebar li a {
+    font-size: 0;
+  }
+
+  .sidebar li a::before {
+    font-size: 1.4rem;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
+
+/* Teléfonos (hasta 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px 12px;
+    height: 55px;
+  }
+
+  .header-left h1 {
+    font-size: 1rem;
+  }
+
+  .btn-logout {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .sidebar {
+    width: 50px;
+    min-height: calc(100vh - 55px);
+  }
+
+  .sidebar li {
+    padding: 10px 8px;
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 10px;
+  }
 }

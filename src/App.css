@@ -1,4 +1,5 @@
 /* ===== DASHBOARD ===== */
+/* ===== DASHBOARD ===== */
 .dashboard-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -57,7 +58,6 @@
   margin-bottom: 8px;
 }
 
-/* La cuarta tarjeta (Alertas) tiene el número en rojo */
 .card:nth-child(4) .number {
   color: #EF4444;
 }
@@ -120,7 +120,6 @@
   border-bottom: none;
 }
 
-/* Puntos de estado para stock bajo */
 .dot {
   width: 10px;
   height: 10px;
@@ -133,7 +132,6 @@
   background: #EF4444;
 }
 
-/* Botón Pedir */
 .btn-order {
   background: #FF6B35;
   color: white;
@@ -150,7 +148,6 @@
   background: #E55A2B;
 }
 
-/* Badges de movimientos */
 .badge-sale {
   background: rgba(34, 197, 94, 0.15);
   color: #22C55E;
@@ -178,30 +175,7 @@
   flex-shrink: 0;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .dashboard-sections {
-    grid-template-columns: 1fr;
-  }
-  
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .card .number {
-    font-size: 2rem;
-  }
-}
-
-/* ===== ESTILOS PARA PÁGINAS ===== */
-
-/* Botones */
+/* ===== BOTONES ===== */
 .btn-add {
   background: #00D4FF;
   color: #0A1628;
@@ -250,7 +224,7 @@
   box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
-/* Tablas */
+/* ===== TABLAS ===== */
 .table-container {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
@@ -289,7 +263,6 @@
   font-weight: 600;
 }
 
-/* Acciones en tabla */
 .btn-action {
   background: transparent;
   border: none;
@@ -312,7 +285,6 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Roles */
 .role-admin {
   background: rgba(0, 212, 255, 0.15);
   color: #00D4FF;
@@ -337,7 +309,7 @@
   font-size: 0.8rem;
 }
 
-/* Reportes */
+/* ===== REPORTES ===== */
 .reports-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -373,8 +345,129 @@
   color: #00D4FF;
 }
 
-@media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+
+/* Tablets grandes (hasta 1024px) */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+
   .reports-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .dashboard-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card .number {
+    font-size: 2rem;
+  }
+
+  .dashboard-sections {
+    gap: 15px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  .section li {
+    font-size: 0.9rem;
+  }
+
+  .btn-order {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .time {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .table-container {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .product-table thead th {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .product-table tbody td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .btn-add,
+  .btn-sell,
+  .btn-purchase {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .reports-grid {
+    gap: 15px;
+  }
+
+  .report-card {
+    padding: 15px;
+  }
+
+  .report-number {
+    font-size: 2rem;
+  }
+}
+
+/* Teléfonos (hasta 480px) */
+@media (max-width: 480px) {
+  .dashboard-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .card .number {
+    font-size: 1.8rem;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+  }
+
+  .section h3 {
+    font-size: 0.95rem;
+  }
+
+  .section li {
+    font-size: 0.85rem;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
   }
 }

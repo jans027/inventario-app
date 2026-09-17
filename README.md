@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sistema de Control de Inventario
+Aplicación web desarrollada con React JS para la gestión de inventario de una ferretería de barrio. Permite administrar productos, registrar ventas y compras, y consultar reportes básicos del negocio.
 
-## Available Scripts
+# Tabla de Contenidos
+Descripción
 
-In the project directory, you can run:
+Problemática
 
-### `npm start`
+Solución Propuesta
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Descripción
+Este proyecto consiste en una aplicación web para el control de inventario de una ferretería de barrio. La aplicación permite registrar productos, actualizar el stock automáticamente con cada venta o compra, consultar la disponibilidad de productos y generar alertas cuando el stock está por agotarse.
 
-### `npm test`
+El objetivo principal es resolver los problemas de organización que enfrentan los pequeños negocios que llevan su control de inventario de forma manual.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Problemática
+Los pequeños negocios, como las ferreterías de barrio, enfrentan los siguientes problemas:
 
-### `npm run build`
+No saben con certeza qué productos tienen disponibles en el momento de la venta.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Realizan compras por intuición, sin datos que respalden la decisión.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No llevan un registro claro de los movimientos de entrada y salida.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pierden ventas porque no pueden confirmar la disponibilidad de un producto.
 
-### `npm run eject`
+No tienen visibilidad sobre el valor total de su inventario.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Solución Propuesta
+La aplicación web de control de inventario ofrece las siguientes funcionalidades:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Registro de productos con nombre, descripción, precio, cantidad y categoría.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Actualización automática del stock al registrar una venta o una compra.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Consulta rápida de la disponibilidad de cualquier producto.
 
-## Learn More
+Alertas visuales cuando un producto está por debajo del stock mínimo.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Historial de movimientos con fecha, tipo, cantidad y usuario.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Panel de resumen con totales y productos con stock bajo.
 
-### Code Splitting
+# Tecnologías Utilizadas
+## Frontend
+React JS: Librería principal para construir la interfaz de usuario.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+React Router DOM: Manejo de la navegación entre páginas.
 
-### Analyzing the Bundle Size
+HTML5: Estructura de las páginas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+CSS3: Estilos y diseño visual.
 
-### Making a Progressive Web App
+JavaScript: Lógica del lado del cliente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Herramientas de Desarrollo
+Node.js: Entorno de ejecución de JavaScript.
 
-### Advanced Configuration
+npm: Gestor de paquetes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Visual Studio Code: Editor de código.
 
-### Deployment
+Git: Control de versiones.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GitHub: Repositorio remoto.
