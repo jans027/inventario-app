@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
         </div>
         <div className="header-right">
           <span className="user-name">Admin</span>
-          <button className="btn-logout">Cerrar Sesión</button>
+          <button className="btn-logout">Cerrar Sesion</button>
         </div>
       </header>
 
@@ -41,27 +41,42 @@ const Layout = ({ children }) => {
           <ul>
             {/* Dashboard link */}
             <li className={isActive('/dashboard') || isActive('/')}>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/dashboard">
+                <span className="nav-text">Dashboard</span>
+                <span className="nav-short">D</span>
+              </Link>
             </li>
             
             {/* Products link */}
             <li className={isActive('/productos')}>
-              <Link to="/productos">Productos</Link>
+              <Link to="/productos">
+                <span className="nav-text">Productos</span>
+                <span className="nav-short">P</span>
+              </Link>
             </li>
             
             {/* Movements link */}
             <li className={isActive('/movimientos')}>
-              <Link to="/movimientos">Movimientos</Link>
+              <Link to="/movimientos">
+                <span className="nav-text">Movimientos</span>
+                <span className="nav-short">M</span>
+              </Link>
             </li>
             
             {/* Users link */}
             <li className={isActive('/usuarios')}>
-              <Link to="/usuarios">Usuarios</Link>
+              <Link to="/usuarios">
+                <span className="nav-text">Usuarios</span>
+                <span className="nav-short">U</span>
+              </Link>
             </li>
             
             {/* Reports link */}
             <li className={isActive('/reportes')}>
-              <Link to="/reportes">Reportes</Link>
+              <Link to="/reportes">
+                <span className="nav-text">Reportes</span>
+                <span className="nav-short">R</span>
+              </Link>
             </li>
           </ul>
         </nav>
