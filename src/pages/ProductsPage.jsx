@@ -1,17 +1,21 @@
 import React from 'react';
 
+/**
+ * ProductsPage component
+ * Displays a table with all products and their actions (edit, delete, view)
+ */
 const ProductsPage = () => {
   return (
     <div>
-      <h2>📦 Productos</h2>
+      <h2>Productos</h2>
       <p className="subtitle">Gestiona el catálogo de productos</p>
 
-      {/* Botón para agregar */}
+      {/* ===== ADD PRODUCT BUTTON ===== */}
       <div style={{ marginBottom: '20px' }}>
         <button className="btn-add">+ Agregar Producto</button>
       </div>
 
-      {/* Tabla de productos */}
+      {/* ===== PRODUCTS TABLE ===== */}
       <div className="table-container">
         <table className="product-table">
           <thead>
@@ -25,6 +29,7 @@ const ProductsPage = () => {
             </tr>
           </thead>
           <tbody>
+            {/* Product row 1 */}
             <tr>
               <td>1</td>
               <td>Clavo 2"</td>
@@ -32,23 +37,27 @@ const ProductsPage = () => {
               <td>45</td>
               <td>Herrajes</td>
               <td>
-                <button className="btn-action edit">✏️</button>
-                <button className="btn-action delete">🗑️</button>
-                <button className="btn-action view">👁️</button>
+                <button className="btn-action edit"></button>
+                <button className="btn-action delete"></button>
+                <button className="btn-action view"></button>
               </td>
             </tr>
+            
+            {/* Product row 2 - Low stock example */}
             <tr>
               <td>2</td>
               <td>Pintura Azul</td>
               <td>$25.000</td>
-              <td className="low-stock">2 ⚠️</td>
+              <td className="low-stock">2</td>
               <td>Pintura</td>
               <td>
-                <button className="btn-action edit">✏️</button>
-                <button className="btn-action delete">🗑️</button>
-                <button className="btn-action view">👁️</button>
+                <button className="btn-action edit"></button>
+                <button className="btn-action delete"></button>
+                <button className="btn-action view"></button>
               </td>
             </tr>
+            
+            {/* Product row 3 */}
             <tr>
               <td>3</td>
               <td>Martillo</td>
@@ -56,9 +65,9 @@ const ProductsPage = () => {
               <td>12</td>
               <td>Herramientas</td>
               <td>
-                <button className="btn-action edit">✏️</button>
-                <button className="btn-action delete">🗑️</button>
-                <button className="btn-action view">👁️</button>
+                <button className="btn-action edit"></button>
+                <button className="btn-action delete"></button>
+                <button className="btn-action view"></button>
               </td>
             </tr>
           </tbody>

@@ -1,18 +1,22 @@
 import React from 'react';
 
+/**
+ * MovementsPage component
+ * Displays the history of sales and purchases movements
+ */
 const MovementsPage = () => {
   return (
     <div>
-      <h2>💰 Movimientos</h2>
+      <h2>Movimientos</h2>
       <p className="subtitle">Registro de ventas y compras</p>
 
-      {/* Botones de acción */}
+      {/* ===== ACTION BUTTONS ===== */}
       <div style={{ marginBottom: '20px', display: 'flex', gap: '10px' }}>
-        <button className="btn-sell">💰 Registrar Venta</button>
-        <button className="btn-purchase">📦 Registrar Compra</button>
+        <button className="btn-sell">Registrar Venta</button>
+        <button className="btn-purchase">Registrar Compra</button>
       </div>
 
-      {/* Tabla de movimientos */}
+      {/* ===== MOVEMENTS TABLE ===== */}
       <div className="table-container">
         <table className="product-table">
           <thead>
@@ -26,29 +30,34 @@ const MovementsPage = () => {
             </tr>
           </thead>
           <tbody>
+            {/* Sale movement */}
             <tr>
               <td>Hoy 10:30</td>
               <td><span className="badge-sale">Venta</span></td>
               <td>Clavo 2"</td>
               <td>-5</td>
               <td>Juan</td>
-              <td>✅ Completado</td>
+              <td>Completado</td>
             </tr>
+            
+            {/* Purchase movement */}
             <tr>
               <td>Hoy 10:15</td>
               <td><span className="badge-purchase">Compra</span></td>
               <td>Pintura Azul</td>
               <td>+20</td>
               <td>Admin</td>
-              <td>✅ Completado</td>
+              <td>Completado</td>
             </tr>
+            
+            {/* Sale movement */}
             <tr>
               <td>Ayer 16:45</td>
               <td><span className="badge-sale">Venta</span></td>
               <td>Martillo</td>
               <td>-2</td>
               <td>María</td>
-              <td>✅ Completado</td>
+              <td>Completado</td>
             </tr>
           </tbody>
         </table>

@@ -1,46 +1,57 @@
 import React from 'react';
 
+/**
+ * DashboardPage component
+ * Displays a summary of the inventory: totals, low stock alerts and recent movements
+ */
 const DashboardPage = () => {
   return (
     <div className="dashboard-content">
-      <h2>📊 Dashboard</h2>
+      <h2>Dashboard</h2>
       <p className="subtitle">Resumen general del inventario</p>
 
-      {/* Tarjetas de resumen */}
+      {/* ===== SUMMARY CARDS ===== */}
       <div className="cards-container">
+        
+        {/* Total products card */}
         <div className="card">
-          <div className="card-icon">📦</div>
+          <div className="card-icon"></div>
           <h3>Total Productos</h3>
           <p className="number">45</p>
           <span className="badge badge-green">+2 este mes</span>
         </div>
 
+        {/* Total stock card */}
         <div className="card">
-          <div className="card-icon">📈</div>
+          <div className="card-icon"></div>
           <h3>Stock Total</h3>
           <p className="number">1,280</p>
           <span className="badge badge-green">+45 este mes</span>
         </div>
 
+        {/* Total value card */}
         <div className="card">
-          <div className="card-icon">💰</div>
+          <div className="card-icon"></div>
           <h3>Valor Total</h3>
           <p className="number">$156,800</p>
           <span className="badge badge-green">+$12,400</span>
         </div>
 
+        {/* Alerts card */}
         <div className="card">
-          <div className="card-icon">⚠️</div>
+          <div className="card-icon"></div>
           <h3>Alertas</h3>
           <p className="number">3</p>
           <span className="badge badge-red">2 críticas</span>
         </div>
       </div>
 
-      {/* Secciones inferiores */}
+      {/* ===== BOTTOM SECTIONS ===== */}
       <div className="dashboard-sections">
+        
+        {/* Low stock products section */}
         <div className="section">
-          <h3>⚠️ Productos con Stock Bajo</h3>
+          <h3>Productos con Stock Bajo</h3>
           <ul>
             <li>
               <span className="dot red"></span>
@@ -60,8 +71,9 @@ const DashboardPage = () => {
           </ul>
         </div>
 
+        {/* Recent movements section */}
         <div className="section">
-          <h3>📋 Movimientos Recientes</h3>
+          <h3>Movimientos Recientes</h3>
           <ul>
             <li>
               <span className="badge-sale">Venta</span>
