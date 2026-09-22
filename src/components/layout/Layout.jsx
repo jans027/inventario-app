@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Layout.css';
+import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 
 /**
  * Layout component
@@ -25,7 +26,8 @@ const Layout = ({ children }) => {
       {/* ===== HEADER ===== */}
       <header className="header">
         <div className="header-left">
-          <h1>Inventario</h1>
+          
+          <h1><BuildCircleIcon />Ferreteria Caldas</h1>
         </div>
         <div className="header-right">
           <span className="user-name">Admin</span>
