@@ -27,6 +27,22 @@
   text-align: center;
 }
 
+.titulo-centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.icono {
+  font-size: 1.2em;
+}
+
+.texto {
+  font-size: 1em;
+}
+
 .header-right {
   display: flex;
   align-items: center;

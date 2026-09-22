@@ -27,7 +27,10 @@ const Layout = ({ children }) => {
       <header className="header">
         <div className="header-left">
           
-          <h1><BuildCircleIcon />Ferreteria Caldas</h1>
+          <h1 className="titulo-centrado">
+            <span className="icono"><BuildCircleIcon /></span>
+            <span className="texto">Ferreteria Caldas</span>
+          </h1>
         </div>
         <div className="header-right">
           <span className="user-name">Admin</span>

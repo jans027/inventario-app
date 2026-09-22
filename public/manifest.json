@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Ferreteria Caldas",
+  "name": "Sistema de Control de Inventario",
   "icons": [
     {
       "src": "favicon.ico",
